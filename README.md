@@ -1,2 +1,53 @@
-# MoDoPublic
-MoDo is a simple open source discord bot
+# MoDo, the last bot you'll need
+### What is MoDo?
+MoDo is a simple discord bot that has many features and commands, each command is simple to use and is mainly self-explanatory.
+## Commands, Features and Types
+### Types
+ - Moderation
+ - Utility
+ - Fun
+ - Music (Rate Limited)
+ - Economy
+ - Phone 
+ - Configuration
+ - Other
+### Commands
+####  1. Moderation
+`ban`, `clear`, `hardban`, `kick`, `mute`, `softban`, `tempban`, `tempmute`, `unban`, `unmute`
+#### 2. Utility
+`afk`, `avatar`, `botinfo`, `calc`, `editsnipe`, `giverole`, `nick`, `poll`, `removerole`, `serverinfo`, `setslow`, `snipe`
+#### 3. Fun
+`8ball`, `cat`, `clyde`, `coinflip`, `cookie`, `dadjoke`, `decode`, `dog`, `embed`, `encode`, `fail`, `fast`, `flashbang`, `google`, `hit`, `howhot`, `imgquote`, `imgur`, `meme`, `number`, `rockpaperscissors`, `tpose`, `typingtest`, `weather`, `wot`, `tweet`, `love`, `facepalm`, `rank`
+#### 4. Music (Rate Limited)
+`join`, `leave`, `play`, `stop`
+#### 5. Economy
+`addmoney`, `pay`, `daily`, `balance`, `bank`, `removemoney`, `work`
+#### 6. Phone
+`phonecall`, `phonebook`, `setphonechannel`, `hangup`
+#### 7. Configurations
+`badwordfilter`, `configurations`, `customcommamd`, `invitefilter`, `leavemsg`, `logging`, `setprefix`, `welcomemsg`, `enablexp`, `disablexp`
+#### 8. Other
+`allcmd`, `links`, `ping`, `report`, `say`, `setup`, `shutdownrequest`, `suggest`, `uptime`, `vote`, `help`
+#### If you are confused about a command
+Do `m-help <command name / alias / type>` in a discord chat!
+## Features
+MoDo has a lot of features, such as a configurable welcome message, leave message, invite filter, profanity filter, logging, leveling, economy, calling other servers, and even custom commands!
+
+### Some of the features it has
+* **Logging**,
+MoDo logs a lot of stuff, such as: Invite creation, role creation, new member, etc.
+* **Welcome and Leave messages**,
+You can turn on auto roles, and a welcome message for people when they join the server, and the same when people leave!
+* **Custom Commands**,
+MoDo has configurable custom commands where you can do something like `m-hi` and itll say `hello!` back!
+* **Profanity Filter**,
+MoDo has a profanity filter, its just the basic profanity filter but you can add your own custom words! 
+* **Invite filter**,
+If this is set to on it will detect and delete any discord invites!
+* **Phone calls**,
+You can now call other servers! Just set the phone channel and do `m-phonebook` to see the numbers!
+* **Economy**,
+MoDo Also now has a economy! Do you're daily chores and go work hard to earn some money!
+* **Leveling**,
+MoDo has just came out with a leveling system! Its pretty simple, level up by being active and sending messages!
+## Thanks for looking at my bot, and remember, it only takes 6 clicks to invite him!
