@@ -63,9 +63,9 @@ export default class Fact extends Command {
         });
 
         const embed2 = new MessageEmbed()
-            embed.setAuthor(`${understands[random]}: ${factName} is ${factValue}`, 'https://cdn.discordapp.com/emojis/747246056005304332.png?v=1')
-            embed.setColor(0x38b6ff);
-            embed.setFooter("MoDo | By Dorsey");
+            .setAuthor(`${understands[random]}: ${factName} is ${factValue}`, 'https://cdn.discordapp.com/emojis/747246056005304332.png?v=1')
+            .setColor(0x38b6ff)
+            .setFooter("MoDo | By Dorsey");
         return message.util.send(embed2)
     }
 }
