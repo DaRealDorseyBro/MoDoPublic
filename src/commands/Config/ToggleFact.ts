@@ -6,7 +6,7 @@ export default class ToggleFact extends Command {
     public constructor() {
         super("togglefact", {
             aliases: ['togglefact'],
-            category: "AI",
+            category: "Config",
             description: {
                 content: "test",
                 usage: `test`,
