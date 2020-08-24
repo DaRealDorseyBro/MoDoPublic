@@ -1,7 +1,9 @@
 import {Listener} from "discord-akairo"
 import Discord from "discord.js"
-import {Message} from "discord.js"
+import {Message, User} from "discord.js"
 import quick from "quick.db"
+import {Facts} from "../../models/Facts";
+import {Repository} from "typeorm"
 
 export default class MessageListener extends Listener {
     public constructor() {
@@ -15,7 +17,57 @@ export default class MessageListener extends Listener {
     public async exec(message: Message): Promise<void> {
 
             if (message.author.bot) return;
-            if (message.channel.type !== "text") return;
+
+            let args = message.content.split(/ +/)
+        if (!await quick.fetch(`autoFacts_${message.guild.id}`)) {
+            if (args.includes('is') && !message.content.startsWith('m-') && args[0] !== 'what') {
+                let Text = args.join(' ').split("is")
+                let factName = Text[0].trim()
+                let factValue = Text[1].trim()
+                if (factName && factValue) {
+                    const factRepo: Repository<Facts> = this.client.db.getRepository(Facts);
+
+                    const factSearch: Facts[] = await factRepo.find({fact: factName});
+
+                    if (!factSearch.length) {
+
+                        factRepo.insert({
+                            setby: message.author.id,
+                            fact: factName,
+                            value: factValue
+                        });
+                    }
+                }
+            }
+
+            if (args.includes('is') && !message.content.startsWith('m-') && args[0] === 'what') {
+                let whatis = args.join(' ').split("is")
+                let factsName = whatis[1].trim()
+                if (factsName) {
+                    const factRepo: Repository<Facts> = this.client.db.getRepository(Facts);
+
+                    const facts: Facts[] = await factRepo.find({fact: factsName});
+                    if (facts.length) {
+                        const factSearch = await Promise.all(facts.map(async (v: Facts) => {
+                            const setter: User = await this.client.users.fetch(v.setby).catch(() => null);
+                            if (setter) return {
+                                fact: v.fact,
+                                value: v.value
+                            }
+                        }));
+                        let random = Math.floor(Math.random() * 2) + 1
+                        if (random === 3)
+                            message.util.send(factSearch.map(v => `I was told ${v.fact} is ${v.value}`))
+                        else if (random === 2)
+                            message.util.send(factSearch.map(v => `Someone once said that ${v.fact} is ${v.value}`))
+                        else if (random === 1)
+                            message.util.send(factSearch.map(v => `I think ${v.fact} is ${v.value}`))
+                    }
+                }
+            }
+        }
+
+            if (message.channel.type === "text") return;
             let timeout = 60000;
             let wait = await quick.fetch(
                 `messageWait_${message.guild.id}_${message.author.id}`
