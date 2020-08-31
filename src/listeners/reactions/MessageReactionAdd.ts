@@ -13,7 +13,7 @@ export default class MessageReactionAdd extends Listener {
     }
     public async exec(reaction: MessageReaction): Promise<any> {
         let message = reaction.message;
-        if (reaction.emoji.name !== '⭐' && reaction.emoji.name !== '🌟' && reaction.emoji.name !== '💫') return;
+        if (reaction.emoji.name !== '⭐') return;
         if (!message.content) return;
         if (reaction.count < await db.fetch(`starminimum_${message.guild.id}`)) return;
         const channel = await message.guild.channels.cache.get(db.fetch(`starchannel_${message.guild.id}`))
