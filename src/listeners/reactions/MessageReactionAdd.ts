@@ -13,7 +13,8 @@ export default class MessageReactionAdd extends Listener {
     }
     public async exec(reaction: MessageReaction): Promise<any> {
         let message = reaction.message;
-        if (reaction.emoji.name !== '⭐') return;
+        let emoji = await db.fetch(`staremoji_${message.guild.id}`) ? await db.fetch(`staremoji_${message.guild.id}`) : '⭐'
+        if (reaction.emoji.name !== emoji) return;
         if (!message.content) return;
         if (reaction.count < await db.fetch(`starminimum_${message.guild.id}`)) return;
         const channel = await message.guild.channels.cache.get(db.fetch(`starchannel_${message.guild.id}`))
@@ -23,7 +24,7 @@ export default class MessageReactionAdd extends Listener {
             const embed = new MessageEmbed()
                 .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${Util.escapeMarkdown(message.content)} | [Jump](${message.url})`)
-                .setFooter(`${reaction.count}⭐ - ${message.id}`)
+                .setFooter(`${reaction.count}${emoji} - ${message.id}`)
                 .setTimestamp(message.createdAt)
                 .setColor(0x38b6ff)
             if (message.attachments.first())embed.setImage(message.attachments.first().proxyURL)
@@ -37,7 +38,7 @@ export default class MessageReactionAdd extends Listener {
             const embed = new MessageEmbed()
                 .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`${Util.escapeMarkdown(message.content)} | [Jump](${message.url})`)
-                .setFooter(`${reaction.count}⭐ - ${message.id}`)
+                .setFooter(`${reaction.count}${emoji} - ${message.id}`)
                 .setTimestamp(message.createdAt)
                 .setColor(0x38b6ff)
                 if (message.attachments.first())embed.setImage(message.attachments.first().proxyURL)

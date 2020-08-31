@@ -1,5 +1,5 @@
 import {Command} from "discord-akairo"
-import {Message, MessageEmbed, GuildChannel} from "discord.js"
+import {Message, MessageEmbed, GuildChannel, GuildEmoji} from "discord.js"
 import db from "quick.db"
 
 export default class StarBoard extends Command {
@@ -26,6 +26,14 @@ export default class StarBoard extends Command {
                     },
                 },
                 {
+                  id: 'emoji',
+                  type: 'string',
+                  prompt: {
+                      start: (msg: Message) => `${msg.author}, Please send a emoji for the starboard`,
+                      retry: (msg: Message) => `${msg.author}, Please send a valid emoji for the starboard`
+                  }
+                },
+                {
                     id: 'amount',
                     type: 'number',
                     prompt: {
@@ -37,12 +45,18 @@ export default class StarBoard extends Command {
         });
     }
 
-    public async exec(message:Message, {channel, amount}: {channel: GuildChannel, amount: any}): Promise<any> {
+    public async exec(message:Message, {channel, emoji, amount}: {channel: GuildChannel, emoji: GuildEmoji, amount: any}): Promise<any> {
+        function isCustomEmoji(emoji5) {
+            return emoji5.split(":").length === 1 ? false : true;
+        }
+        let emojiCheck = isCustomEmoji(emoji)
+        if (emojiCheck === true) return message.util.send('Sorry! Can\' use custom emojis!')
         await db.set(`starchannel_${message.guild.id}`, channel.id)
+        await db.set(`staremoji_${message.guild.id}`, emoji)
         await db.set(`starminimum_${message.guild.id}`, amount)
         message.util.send(new MessageEmbed()
             .setTitle(`Starboard for ${message.guild.name}`)
-            .setDescription(`Minimum Stars: ${await db.fetch(`starminimum_${message.guild.id}`)}\nStarboard Channel: <#${await db.fetch(`starchannel_${message.guild.id}`)}>`)
+            .setDescription(`Emoji: ${await db.fetch(`staremoji_${message.guild.id}`)}\nMinimum Stars: ${await db.fetch(`starminimum_${message.guild.id}`)}\nStarboard Channel: <#${await db.fetch(`starchannel_${message.guild.id}`)}>`)
             .setTimestamp()
             .setColor(0x38b6ff)
             .setFooter("MoDo | By Dorsey")
