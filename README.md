@@ -31,27 +31,28 @@ MoDo is a simple discord bot that has many features and commands, each command i
 `allcmd`, `links`, `ping`, `report`, `say`, `setup`, `shutdownrequest`, `suggest`, `uptime`, `vote`, `help`
 #### If you are confused about a command
 Do `m-help <command name / alias / type>` in a discord chat!
+
 ## Features
-MoDo has a lot of features, such as a configurable welcome message, leave message, invite filter, profanity filter, logging, leveling, economy, calling other servers, and even custom commands!
+MoDo has a lot of features, such as a configurable welcome message, leave message, invite filter, profanity filter, logging, leveling, economy, calling other servers, and your own custom commands!
 
 ### Available features of Discord Bot
 * **Logging**,
-MoDo logs a lot of stuff, such as: Invite creation, role creation, new member, etc.
+MoDo logs many actions/interactions such as invite creation, role creation, new member joining, and more!
 * **Welcome and Leave messages**,
-You can turn on auto roles, and a welcome message for people when they join the server, and the same when people leave!
+You can turn on auto roles, a welcome message for people when they join the server, and a ciao message for when people leave.
 * **Custom Commands**,
-MoDo has configurable custom commands where you can do something like `m-hi` and itll say `hello!` back!
+MoDo has configurable custom commands where you can type text like `m-hi` and MoDo will say `hello!` back!
 * **Profanity Filter**,
-MoDo has a profanity filter, its just the basic profanity filter but you can add your own custom words! 
+MoDo has a basic profanity filter which lets you add your own custom words. 
 * **Invite filter**,
-If this is set to on it will detect and delete any discord invites!
+If this is set to **on** it will detect and delete any discord invites!
 * **Phone calls**,
-You can now call other servers! Just set the phone channel and do `m-phonebook` to see the numbers!
+You can now call other servers! Just set the phone channel and do `m-phonebook` to see the numbers.
 * **Economy**,
-MoDo Also now has a economy! Do you're daily chores and go work hard to earn some money!
+MoDo also now has economy features! Do your daily "chores" and go work hard to earn some money within your Discord server!
 * **Leveling**,
-MoDo has just came out with a leveling system! Its pretty simple, level up by being active and sending messages!
+MoDo has recently been given a leveling system! Its pretty simple: level up by being active and get sent congratulation messages!
 ## Thanks for checking out MoDo's README!
 (P.S. It takes less than 8 clicks to invite the bot below)
 
-<b><a href="https://discord.com/oauth2/authorize?client_id=711421867776278579&scope=bot&permissions=405810390"><button type="button" name="button" class="btn">Invite MoDo</button></a></b>
+#### [Invite MoDo](https://discord.com/oauth2/authorize?client_id=711421867776278579&scope=bot&permissions=405810390)
