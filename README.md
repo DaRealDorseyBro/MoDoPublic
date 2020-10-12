@@ -34,7 +34,7 @@ Do `m-help <command name / alias / type>` in a discord chat!
 ## Features
 MoDo has a lot of features, such as a configurable welcome message, leave message, invite filter, profanity filter, logging, leveling, economy, calling other servers, and even custom commands!
 
-### Some of the features it has
+### Available features of Discord Bot
 * **Logging**,
 MoDo logs a lot of stuff, such as: Invite creation, role creation, new member, etc.
 * **Welcome and Leave messages**,
