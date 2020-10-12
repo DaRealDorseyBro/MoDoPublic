@@ -3,14 +3,15 @@
 MoDo is a simple discord bot that has many features and commands, each command is simple to use and is mainly self-explanatory.
 ## Commands, Features and Types
 ### Types
- - Moderation
- - Utility
- - Fun
- - Music (Rate Limited)
- - Economy
- - Phone 
- - Configuration
- - Other
+ - [Moderation](#1-moderation)
+ - [Utility](#2-utility)
+ - [Fun](#3-fun)
+ - [Music (Rate Limited)](#4-music-rate-limited)
+ - [Economy](#5-economy)
+ - [Phone](#6-phone)
+ - [Configuration](#7-configurations)
+ - [Other](#8-other)
+ - [Help](#if-you-are-confused-about-a-command)
 ### Commands
 ####  1. Moderation
 `ban`, `clear`, `hardban`, `kick`, `mute`, `softban`, `tempban`, `tempmute`, `unban`, `unmute`
