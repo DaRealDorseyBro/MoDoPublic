@@ -51,7 +51,7 @@ You can now call other servers! Just set the phone channel and do `m-phonebook` 
 MoDo Also now has a economy! Do you're daily chores and go work hard to earn some money!
 * **Leveling**,
 MoDo has just came out with a leveling system! Its pretty simple, level up by being active and sending messages!
-## Thanks for looking at my bot!
-(P.S. It only takes 6 clicks to invite him below)
+## Thanks for checking out MoDo's README!
+(P.S. It takes less than 8 clicks to invite the bot below)
 
-<button type="button" name="button" class="btn"><a href="https://discord.com/oauth2/authorize?client_id=711421867776278579&scope=bot&permissions=405810390">Invite MoDo</a></button>
+<b><a href="https://discord.com/oauth2/authorize?client_id=711421867776278579&scope=bot&permissions=405810390"><button type="button" name="button" class="btn">Invite MoDo</button></a></b>
