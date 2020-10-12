@@ -1,6 +1,6 @@
 # MoDo, the last bot you'll need
 ### What is MoDo?
-MoDo is a simple discord bot that has many features and commands, each command is simple to use and is mainly self-explanatory.
+MoDo is a simple discord bot that has many features and commands, each command is simple to use and is mainly self-explanatory. The bot can be added to your server on [Top.gg](https://top.gg/bot/711421867776278579) or with the Invite button at the bottom of this README. 
 ## Commands, Features and Types
 ### Types
  - [Moderation](#1-moderation)
@@ -52,4 +52,6 @@ MoDo Also now has a economy! Do you're daily chores and go work hard to earn som
 * **Leveling**,
 MoDo has just came out with a leveling system! Its pretty simple, level up by being active and sending messages!
 ## Thanks for looking at my bot!
-(P.S. It only takes 6 clicks to invite him,)
+(P.S. It only takes 6 clicks to invite him below)
+
+<button type="button" name="button" class="btn"><a href="https://discord.com/oauth2/authorize?client_id=711421867776278579&scope=bot&permissions=405810390">Invite MoDo</a></button>
